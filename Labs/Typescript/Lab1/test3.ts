@@ -16,7 +16,7 @@ function calculateIceCreamCost(
     withMarshmallow: boolean = false
 ): number {
  
-    
+
     let cost = size;
 
     for (const topping of toppings) {
@@ -26,7 +26,6 @@ function calculateIceCreamCost(
     if (withMarshmallow) {
         cost += Topping.Marshmallow;
     }
-
     return cost;
 }
 

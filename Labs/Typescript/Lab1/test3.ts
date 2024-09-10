@@ -16,6 +16,7 @@ function calculateIceCreamCost(
     withMarshmallow: boolean = false
 ): number {
  
+    
     let cost = size;
 
     for (const topping of toppings) {

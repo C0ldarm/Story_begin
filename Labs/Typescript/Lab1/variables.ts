@@ -1,12 +1,12 @@
 
-let stringa: string = "Hello, TypeScript!";
+let stringa: string = "Ohio, Scriptic!";
 let num: number = 42;
 let goool: boolean = true;
-let anything: any = "This can be anything";
+let anything: any = "Michael Jordam";
 
 console.log("String:", stringa);
 console.log("Number:" + num);
-console.log("Boolean:", goool);
+console.log("Goool?", goool);
 console.log("Any value:" + anything);
 
 let errors: string[] = ["0x000000F4 CRITICAL_OBJECT_TERMINATION", "Kernel Panic - Not Syncing: Fatal Exception", "Machine Check Exception: Bank 1: 0x0000000000000004"];

@@ -82,7 +82,7 @@ interface LibraryItem {
   library.addItem(book1);
   library.addItem(dvd1);
   
-  book1.borrow();
+  dvd1.borrow();
   
   console.log(library.listAvailableItems());
   

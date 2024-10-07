@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Library Management System</title>
+    <link rel="stylesheet" href="lib/bootstrap.min.css"> <!-- Include Bootstrap CSS -->
+    <link rel="stylesheet" href="style.css"> <!-- Your custom styles -->
+</head>
+<body class="container mt-5">
+    <h1>Library Management System</h1>
+
+    <!-- Add Book Section -->
+    <section class="mb-4">
+        <h2>Add Book</h2>
+        <form id="addBookForm" class="form-inline">
+            <div class="mb-3">
+                <label for="bookTitle" class="form-label">Book Title</label>
+                <input type="text" class="form-control" id="bookTitle" placeholder="Enter book title" required>
+            </div>
+            <div class="mb-3">
+                <label for="bookAuthor" class="form-label">Author</label>
+                <input type="text" class="form-control" id="bookAuthor" placeholder="Enter author's name" required>
+            </div>
+            <div class="mb-3">
+                <label for="bookYear" class="form-label">Year of Publication</label>
+                <input type="number" class="form-control" id="bookYear" placeholder="Enter year" required>
+            </div>
+            <button type="submit" class="btn btn-success">Add Book</button>
+        </form>
+    </section>
+
+    <!-- Add User Section -->
+    <section class="mb-4">
+        <h2>Add User</h2>
+        <form id="addUserForm" class="form-inline">
+            <div class="mb-3">
+                <label for="userName" class="form-label">Name</label>
+                <input type="text" class="form-control" id="userName" placeholder="Enter name" required>
+            </div>
+            <div class="mb-3">
+                <label for="userEmail" class="form-label">Email</label>
+                <input type="email" class="form-control" id="userEmail" placeholder="Enter email" required>
+            </div>
+            <button type="submit" class="btn btn-success">Add User</button>
+        </form>
+    </section>
+
+    <!-- Lists of Books and Users -->
+    <section class="mb-4">
+        <h2>List of Books</h2>
+        <ul id="bookList" class="list-group">
+            <li class="list-group-item">No books available</li>
+        </ul>
+    </section>
+
+    <section class="mb-4">
+        <h2>List of Users</h2>
+        <ul id="userList" class="list-group">
+            <li class="list-group-item">No users available</li>
+        </ul>
+    </section>
+
+  <!-- Borrow and Return Book Section -->
+  <section class="mb-4">
+    <h2>Borrow Book</h2>
+    <form id="borrowBookForm" class="form-inline">
+        <div class="mb-3">
+            <label for="borrowUserId" class="form-label">User ID</label>
+            <input type="number" class="form-control" id="borrowUserId" placeholder="Enter user ID" required>
+        </div>
+        <div class="mb-3">
+            <label for="borrowBookTitle" class="form-label">Book Title</label>
+            <input type="text" class="form-control" id="borrowBookTitle" placeholder="Enter book title" required>
+        </div>
+        <button type="submit" class="btn btn-primary">Borrow Book</button>
+    </form>
+</section>
+
+<section class="mb-4">
+    <h2>Return Book</h2>
+    <form id="returnBookForm" class="form-inline">
+        <div class="mb-3">
+            <label for="returnUserId" class="form-label">User ID</label>
+            <input type="number" class="form-control" id="returnUserId" placeholder="Enter user ID" required>
+        </div>
+        <div class="mb-3">
+            <label for="returnBookTitle" class="form-label">Book Title</label>
+            <input type="text" class="form-control" id="returnBookTitle" placeholder="Enter book title" required>
+        </div>
+        <button type="submit" class="btn btn-warning">Return Book</button>
+    </form>
+</section>
+
+<script src="dist/index.js"></script>
+</body>
+</html>

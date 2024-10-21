@@ -9,7 +9,10 @@
     "test": "echo \"No tests specified\""
   },
   "dependencies": {
+    "autoprefixer": "^10.4.20",
     "core-js": "^3.8.3",
+    "postcss": "^8.4.47",
+    "tailwindcss": "^3.4.14",
     "users-app": "file:",
     "vue": "^3.2.13"
   },

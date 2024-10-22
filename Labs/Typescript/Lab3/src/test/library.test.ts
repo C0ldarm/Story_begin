@@ -12,7 +12,7 @@ describe('Library Class', () => {
         library = new Library<Book>();
     });
 
-    test('should add a book to the library', () => {
+    it('should add a book to the library', () => {
         const book = new Book(Date.now(), 'Test Book', 'Test Author', 2022);
         library.add(book);
         const allBooks = library.getAll();
@@ -20,7 +20,7 @@ describe('Library Class', () => {
         expect(allBooks[0].title).to.equal('Test Book');
     });
 
-    test('should find a book by title', () => {
+    it('should find a book by title', () => {
         const book = new Book(Date.now(), 'Unique Book', 'Test Author', 2022);
         library.add(book);
         const foundBook = library.find(b => b.title === 'Unique Book');

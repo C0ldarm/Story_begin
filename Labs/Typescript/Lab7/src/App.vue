@@ -238,19 +238,7 @@ onMounted(loadParticipants);
 </script>
 
 <style scoped>
-/* Custom glowing effect for the main label */
 .main-label {
-  color: black;
-  text-shadow: 0 0 5px rgba(255, 255, 255, 0.8),
-               0 0 10px rgba(255, 255, 255, 0.7),
-               0 0 15px rgba(0, 153, 255, 0.6);
-}
-
-button {
-  transition: all 0.3s ease;
-}
-
-button:hover {
-  box-shadow: 0 0 10px rgba(0, 204, 255, 0.5);
+  text-shadow: 0 0 10px #ffffff, 0 0 20px #ffffff, 0 0 30px #00ffcc;
 }
 </style>

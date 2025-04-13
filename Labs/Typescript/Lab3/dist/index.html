@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Library Management System</title>
+    <link rel="stylesheet" href="lib/bootstrap.min.css"> <!-- Include Bootstrap CSS -->
+    <link rel="stylesheet" href="style.css"> <!-- Your custom styles -->
+<script defer src="index.js"></script></head>
+<body>
+    <div class="container mt-5">
+        <h1 class="text-center">Library Management System</h1>
+        
+        <div id="notification" class="alert alert-info d-none"></div>
+        
+        <h2 class="mt-4">Add Book</h2>
+        <form id="bookForm">
+            <div class="mb-3">
+                <label for="bookTitle" class="form-label">Title</label>
+                <input type="text" class="form-control" id="bookTitle" required>
+            </div>
+            <div class="mb-3">
+                <label for="bookAuthor" class="form-label">Author</label>
+                <input type="text" class="form-control" id="bookAuthor" required>
+            </div>
+            <div class="mb-3">
+                <label for="bookYear" class="form-label">Year of Publication</label>
+                <input type="number" class="form-control" id="bookYear" required>
+            </div>
+            <button type="submit" class="btn btn-primary">Add Book</button>
+        </form>
+
+        <h2 class="mt-4">Add User</h2>
+        <form id="userForm">
+            <div class="mb-3">
+                <label for="userName" class="form-label">Name</label>
+                <input type="text" class="form-control" id="userName" required>
+            </div>
+            <div class="mb-3">
+                <label for="userId" class="form-label">User ID</label>
+                <input type="number" class="form-control" id="userId" required>
+            </div>
+            <button type="submit" class="btn btn-primary">Add User</button>
+        </form>
+
+        <h2 class="mt-4">Borrow Book</h2>
+        <form id="borrowForm">
+            <div class="mb-3">
+                <label for="borrowUserId" class="form-label">User ID</label>
+                <input type="number" class="form-control" id="borrowUserId" required>
+            </div>
+            <div class="mb-3">
+                <label for="borrowBookId" class="form-label">Book ID</label>
+                <input type="number" class="form-control" id="borrowBookId" required>
+            </div>
+            <button type="submit" class="btn btn-success">Borrow Book</button>
+        </form>
+
+        <h2 class="mt-4">Return Book</h2>
+        <form id="returnForm">
+            <div class="mb-3">
+                <label for="returnUserId" class="form-label">User ID</label>
+                <input type="number" class="form-control" id="returnUserId" required>
+            </div>
+            <div class="mb-3">
+                <label for="returnBookId" class="form-label">Book ID</label>
+                <input type="number" class="form-control" id="returnBookId" required>
+            </div>
+            <button type="submit" class="btn btn-warning">Return Book</button>
+        </form>
+    </div>
+    
+    <script src="dist/index.js"></script> <!-- Your compiled TypeScript file -->
+</body>
+</html>

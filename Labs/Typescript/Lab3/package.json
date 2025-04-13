@@ -1,0 +1,30 @@
+{
+  "name": "library-management",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "test": "mocha -r ts-node/register src/test/**/*.test.ts",
+    "lint": "eslint . --ext .ts",
+    "build": "webpack",
+    "start": "webpack serve --open"
+  },
+  "devDependencies": {
+    "@types/bonjour": "^3.5.13",
+    "@types/chai": "^4.0.0",
+    "@types/mocha": "^10.0.9",
+    "chai": "^4.1.1",
+    "css-loader": "^6.x.x",
+    "html-webpack-plugin": "^5.6.0",
+    "mocha": "^10.7.3",
+    "style-loader": "^3.x.x",
+    "ts-loader": "^9.x.x",
+    "typescript": "^4.x.x",
+    "webpack": "^5.95.0",
+    "webpack-cli": "^4.10.0",
+    "webpack-dev-server": "^4.x.x"
+  },
+  "dependencies": {
+    "bootstrap": "^5.x.x",
+    "library-management": "file:"
+  }
+}

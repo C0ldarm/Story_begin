@@ -1,13 +1,5 @@
 package com.example.mockingtest.model;
 
-/*
-  @author   grok
-  @project   mockingtest
-  @class    Item
-  @version  1.0.0
-  @since    26.05.25 - 22.00
-*/
-
 import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
 import lombok.Builder;

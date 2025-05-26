@@ -1,13 +1,5 @@
 package com.example.mockingtest.service;
 
-/*
-  @author   grok
-  @project   mockingtest
-  @class    ItemService
-  @version  1.0.0
-  @since    26.05.25 - 22.00
-*/
-
 import com.example.mockingtest.model.Item;
 import com.example.mockingtest.repository.ItemRepository;
 import com.example.mockingtest.request.ItemCreateRequest;

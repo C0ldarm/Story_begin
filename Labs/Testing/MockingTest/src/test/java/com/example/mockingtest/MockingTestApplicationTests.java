@@ -58,7 +58,6 @@ class ItemServiceTest {
         updateRequest = new ItemUpdateRequest("1", "Freddie Mercury Updated", "Queen", "vocal, piano");
     }
 
-    // Test 1: Get all items
     @Test
     void givenItemsInRepository_whenGetAll_thenReturnAllItems() {
         // Given
@@ -74,7 +73,6 @@ class ItemServiceTest {
         verify(itemRepository, times(1)).findAll();
     }
 
-    // Test 2: Get all items when repository is empty
     @Test
     void givenEmptyRepository_whenGetAll_thenReturnEmptyList() {
         // Given
@@ -88,7 +86,6 @@ class ItemServiceTest {
         verify(itemRepository, times(1)).findAll();
     }
 
-    // Test 3: Get item by ID when item exists
     @Test
     void givenValidId_whenGetById_thenReturnItem() {
         // Given
@@ -103,7 +100,6 @@ class ItemServiceTest {
         verify(itemRepository, times(1)).findById("1");
     }
 
-    // Test 4: Get item by ID when item does not exist
     @Test
     void givenInvalidId_whenGetById_thenReturnNull() {
         // Given
@@ -117,7 +113,6 @@ class ItemServiceTest {
         verify(itemRepository, times(1)).findById("999");
     }
 
-    // Test 5: Create item with Item object
     @Test
     void givenItemObject_whenCreate_thenReturnSavedItem() {
         // Given
@@ -293,7 +288,6 @@ class ItemServiceTest {
         verify(itemRepository, times(1)).findById("");
     }
 
-    // Test 19: Update item with same data
     @Test
     void givenSameDataUpdateRequest_whenUpdate_thenReturnUpdatedItem() {
         // Given
@@ -311,7 +305,6 @@ class ItemServiceTest {
         verify(itemRepository, times(1)).save(any(Item.class));
     }
 
-    // Test 20: Delete non-existent item
     @Test
     void givenNonExistentId_whenDeleteById_thenNoException() {
         // Given

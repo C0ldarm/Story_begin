@@ -1,13 +1,5 @@
 package com.example.mockingtest.controller;
 
-/*
-  @author   grok
-  @project   mockingtest
-  @class    ItemRestController
-  @version  1.0.0
-  @since    26.05.25 - 22.00
-*/
-
 import com.example.mockingtest.model.Item;
 import com.example.mockingtest.request.ItemCreateRequest;
 import com.example.mockingtest.request.ItemUpdateRequest;

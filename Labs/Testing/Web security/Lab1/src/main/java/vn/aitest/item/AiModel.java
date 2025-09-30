@@ -7,10 +7,10 @@ import org.springframework.data.mongodb.core.mapping.Document;
 public class AiModel {
 
     @Id
-    private String id; // MongoDB uses String for IDs typically
+    private String id;
 
-    private String aiName;  // e.g., "ChatGPT"
-    private String strengths;  // e.g., "good listener"
+    private String aiName;  
+    private String strengths;  
 
     // Default constructor
     public AiModel() {}

@@ -1,0 +1,10 @@
+1 - JWT Token for Admin ( can READ, POST, PUT, DELETE )
+2 - JWT Token for Publisher ( can READ, POST )
+3 - JWT Token for User ( can READ )
+4 - Admin Token can READ
+5 - Admin Token can POST
+6 - Admin Token can PUT
+7 - Admin Token can DELETE
+8 - Publisher Token can POST
+9 - User Token cant POST
+10 - Publisher Token cant PUT

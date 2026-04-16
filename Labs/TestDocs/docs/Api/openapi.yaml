@@ -1,0 +1,103 @@
+openapi: 3.1.0
+info:
+  title: Event Monitoring System API
+  description: REST API для системи моніторингу подій (логи та метрики)
+  version: 1.2.0
+  contact:
+    name: EMS Team
+
+servers:
+  - url: https://api.ems.example.com
+    description: Production server
+
+paths:
+  /api/v1/ingest/logs:
+    post:
+      summary: Інгестія логів
+      description: Приймає пакет логів від агентів
+      tags:
+        - Ingestion
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/LogEntry'
+      responses:
+        '202':
+          description: Логи успішно прийнято
+        '400':
+          description: Невірний формат даних
+        '401':
+          description: Неавторизований доступ
+
+  /api/v1/logs/search:
+    get:
+      summary: Пошук логів
+      tags:
+        - Query
+      parameters:
+        - name: query
+          in: query
+          required: true
+          schema:
+            type: string
+        - name: from
+          in: query
+          schema:
+            type: string
+            format: date-time
+        - name: to
+          in: query
+          schema:
+            type: string
+            format: date-time
+      responses:
+        '200':
+          description: Успішний пошук
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/LogSearchResponse'
+
+components:
+  schemas:
+    LogEntry:
+      type: object
+      required:
+        - timestamp
+        - level
+        - message
+        - service
+      properties:
+        timestamp:
+          type: string
+          format: date-time
+        level:
+          type: string
+          enum: [DEBUG, INFO, WARN, ERROR, CRITICAL]
+        message:
+          type: string
+        service:
+          type: string
+        trace_id:
+          type: string
+
+    LogSearchResponse:
+      type: object
+      properties:
+        total:
+          type: integer
+        hits:
+          type: array
+          items:
+            $ref: '#/components/schemas/LogEntry'
+
+  securitySchemes:
+    bearerAuth:
+      type: http
+      scheme: bearer
+      bearerFormat: JWT
+
+security:
+  - bearerAuth: []

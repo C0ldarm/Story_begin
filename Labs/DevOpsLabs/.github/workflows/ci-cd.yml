@@ -1,23 +1,23 @@
-name: CI Build & Test + SonarCloud (Lab-1)
+name: CI Build & Test + SonarCloud (DevOpsLabs)
 
 on:
   pull_request:
     branches: [ main, master ]
     paths:
-      - 'Labs/DevOpsLabs/Lab-1/**'
+      - 'Labs/DevOpsLabs/**'          # запускається при будь-яких змінах у DevOpsLabs
   push:
     branches: [ main, master ]
     paths:
-      - 'Labs/DevOpsLabs/Lab-1/**'
+      - 'Labs/DevOpsLabs/**'
 
 jobs:
   build-and-test:
     runs-on: ubuntu-latest
 
-    # Важливо: всі команди виконуються всередині папки Lab-1
+    # Всі команди виконуються всередині DevOpsLabs
     defaults:
       run:
-        working-directory: Labs/DevOpsLabs/Lab-1
+        working-directory: Labs/DevOpsLabs
 
     steps:
       - name: Checkout code
@@ -33,14 +33,16 @@ jobs:
           cache: 'maven'
 
       - name: Build and Test with Maven
-        run: ./mvnw clean verify --batch-mode --no-transfer-progress
+        # Запускаємо мvnw з папки Lab-1 (бо там pom.xml і wrapper)
+        run: Lab-1/./mvnw clean verify --batch-mode --no-transfer-progress
 
       - name: SonarCloud Analysis
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           SONAR_TOKEN: ${{ secrets.SONAR_TOKEN }}
+        # Sonar запускаємо теж з Lab-1
         run: |
-          ./mvnw sonar:sonar \
+          Lab-1/./mvnw sonar:sonar \
             -Dsonar.projectKey=c0ldarm_dev0ps \
             -Dsonar.organization=c0ldarm \
             -Dsonar.host.url=https://sonarcloud.io \

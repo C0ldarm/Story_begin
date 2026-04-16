@@ -1,0 +1,1 @@
+For better working Postman CRUD write in headers : Content-Type = application/json

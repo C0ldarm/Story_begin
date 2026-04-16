@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="CompilerConfiguration">
+    <annotationProcessing>
+      <profile name="Maven default annotation processors profile" enabled="true">
+        <sourceOutputDir name="target/generated-sources/annotations" />
+        <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
+        <outputRelativeToContentRoot value="true" />
+        <module name="aitest (8)" />
+        <module name="RomToInt" />
+        <module name="aitest (5)" />
+        <module name="aitest (4)" />
+        <module name="aitest (7)" />
+        <module name="MockingTest" />
+        <module name="aitest (6)" />
+        <module name="aitest (1)" />
+        <module name="aitest (3)" />
+        <module name="aitest (2)" />
+        <module name="integrationtest" />
+        <module name="Test2" />
+        <module name="Test2 (1)" />
+        <module name="aitest" />
+        <module name="ServiceTest" />
+      </profile>
+    </annotationProcessing>
+  </component>
+  <component name="JavacSettings">
+    <option name="ADDITIONAL_OPTIONS_OVERRIDE">
+      <module name="MockingTest" options="-parameters" />
+      <module name="ServiceTest" options="-parameters" />
+      <module name="aitest" options="-parameters" />
+      <module name="aitest (1)" options="-parameters" />
+      <module name="aitest (2)" options="-parameters" />
+      <module name="aitest (3)" options="-parameters" />
+      <module name="aitest (4)" options="-parameters" />
+      <module name="aitest (5)" options="-parameters" />
+      <module name="aitest (6)" options="-parameters" />
+      <module name="aitest (7)" options="-parameters" />
+      <module name="aitest (8)" options="-parameters" />
+      <module name="integrationtest" options="-parameters" />
+    </option>
+  </component>
+</project>

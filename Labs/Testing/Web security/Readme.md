@@ -1,78 +1,19 @@
-## 2.3 — Написання SEO-тексту
+**Проаналізовано 15 зовнішніх посилань (спам-лінки)**
 
-**Цільовий запит:** `Vim review`
-
-# Vim Review: Features, Pros & Alternatives
-
-Якщо ви шукаєте потужний і максимально ефективний текстовий редактор, то **Vim review** допоможе вам зрозуміти, чому цей інструмент досі залишається улюбленцем тисяч розробників у 2026 році. Vim — це не просто редактор, а ціла філософія швидкої роботи з кодом виключно за допомогою клавіатури.
-
-## Основні можливості Vim
-
-Vim вирізняється **modal editing** — системою режимів роботи (Normal, Insert, Visual, Command). Цей підхід дозволяє виконувати складні операції з текстом і кодом за лічені клавіші. Серед ключових функцій:
-- глибока **Vim configuration** через файл `.vimrc` та сучасні плагіни;
-- відмінна підтримка синтаксису та **code navigation** для сотень мов програмування;
-- робота як **terminal-based editor** безпосередньо в терміналі або SSH-сесії.
-
-За кілька років активного використання Vim (і особливо Neovim) я неодноразово переконувався, що після освоєння базових команд продуктивність редагування коду зростає в 1,5–2 рази порівняно зі звичайними графічними редакторами. Це підтверджується як особистим досвідом на великих проєктах, так і відгуками спільноти.
-
-## Переваги та недоліки Vim
-
-**Переваги:**
-- Надзвичайна **portability** — працює на будь-якій ОС і сервері без графічного інтерфейсу.
-- Мінімальне споживання ресурсів і висока швидкість.
-- Можливість повної персоналізації під свої потреби.
-- Відмінна інтеграція з сучасними інструментами (LSP, Tree-sitter, AI-плагіни).
-
-**Недоліки:**
-- Крута крива навчання для новачків.
-- Відсутність зручного графічного інтерфейсу «з коробки».
-- Потребує часу на початкове налаштування.
-
-## Альтернативи Vim
-
-Якщо класичний Vim здається надто суворим, варто розглянути сучасні альтернативи:
-- **Neovim** — покращена версія з підтримкою Lua та асинхронних можливостей;
-- **VS Code** — найпопулярніший редактор з величезною екосистемою розширень;
-- **Helix** та **Zed** — швидкі та сучасні редактори з акцентом на простоту.
-
-Кожна альтернатива має свої сильні сторони, проте **Vim** продовжує лідирувати серед тих, хто цінує швидкість, контроль і ефективність.
-
-## Висновок
-
-**Vim review** показує, що легендарний редактор не втрачає актуальності навіть сьогодні. Він ідеально підходить для DevOps, backend-розробників і всіх, хто часто працює в терміналі.
-
-Хочете суттєво підвищити свою продуктивність? Почніть з установки **Neovim**, налаштуйте базовий конфіг і спробуйте інтегрувати його з AI-інструментами. Спробуйте сьогодні — і ви навряд чи захочете повертатися до звичайних редакторів!
-
-**Загальна кількість слів:** 412
-
----
-
-## Таблиця вимог до SEO-тексту (п. 2.3)
-
-| Вимога                          | Виконано? | Де саме в тексті / коментар |
-|---------------------------------|-----------|-----------------------------|
-| Запит у H1                      | Так       | # **Vim Review**: Features, Pros & Alternatives |
-| Запит у першому абзаці          | Так       | «то **Vim review** допоможе вам зрозуміти...» |
-| Запит у мінімум 1 H2            | Так       | ## Основні можливості Vim |
-| 5+ LSI-варіацій                 | Так       | modal editing, Vim configuration, code navigation, terminal-based editor, portability, Neovim |
-| E-E-A-T сигнал                  | Так       | «За кілька років активного використання Vim (і особливо Neovim) я неодноразово переконувався, що після освоєння базових команд продуктивність редагування коду зростає в 1,5–2 рази» |
-| Заклик до дії                   | Так       | Останній абзац: «Почніть з установки Neovim... Спробуйте сьогодні...» |
-| Відсутній keyword stuffing      | Так       | Ключ входить природно, без переспаму |
-
----
-
-## 2.4 — Перевірка на keyword stuffing
-
-**Формула:**  
-`(кількість входжень ключового слова / загальна кількість слів) × 100%`
-
-- Загальна кількість слів у тексті: **412**  
-- Кількість входжень цільового запиту «Vim review»: **3**  
-- Щільність: **0.73%**
-
-**Норма:**  
-- 1–2.5% — оптимально  
-- вище 3% — ризик keyword stuffing, потрібно переписати
-
-**Висновок:**  
-Щільність **0.73%** знаходиться в безпечному діапазоні. Keyword stuffing відсутній, текст читається природно.
+| Донор                  | URL сторінки-донору                                                                 | Тип          | Анкор                                                                 | Dofollow/Nofollow | Якість  |
+|------------------------|-------------------------------------------------------------------------------------|--------------|-----------------------------------------------------------------------|-------------------|---------|
+| seogeko.shop          | https://seogeko.shop/premium-seo-backlinks-to-boost-website-betterstack-tech...     | blog        | Premium SEO Backlinks betterstack.tech Provides High-Quality Authority Backlinks, Professional Guest Posting, and Advanced Link Building Services to Boost Google Rankings, Drive Targeted Organic Traffic, and Strengthen Website Authority in Gambling, Casino, Crypto, and Competitive Markets | NF                | Risky  |
+| seogeko.shop          | https://seogeko.shop/premium-seo-backlinks-to-boost-website-betterstack-tech...     | blog        | Premium SEO Backlinks betterstack.tech Provides High-Quality Authority Backlinks, Professional Guest Posting, and Advanced Link Building Services to Boost Google Rankings, Drive Targeted Organic Traffic, and Strengthen Website Authority in Gambling, Casino, Crypto, and Competitive Markets | NF                | Risky  |
+| serpzilla.com         | https://serpzilla.com/premium-guest-post-betterstack-tech-stack-directory...        | blog        | High DA Guest Post Backlinks betterstack.tech Tech Stack Comparison Tool – Boost Your SEO Rankings Fast, Buy Premium Authority Links, Professional Link Building Services for Developer Tools, Web Development and SaaS Niche | NF                | Risky  |
+| serpzilla.com         | https://serpzilla.com/premium-guest-post-betterstack-tech-stack-directory...        | blog        | High DA Guest Post Backlinks betterstack.tech Tech Stack Comparison Tool – Boost Your SEO Rankings Fast, Buy Premium Authority Links, Professional Link Building Services for Developer Tools, Web Development and SaaS Niche | NF                | Risky  |
+| serpzilla.com         | https://serpzilla.com/premium-guest-post-betterstack-tech-stack-directory...        | blog        | High DA Guest Post Backlinks betterstack.tech Tech Stack Comparison Tool – Boost Your SEO Rankings Fast, Buy Premium Authority Links, Professional Link Building Services for Developer Tools, Web Development and SaaS Niche | NF                | Risky  |
+| vefogix.com           | https://vefogix.com/premium-backlinks-betterstack-tech-developer-tools...           | directory   | Buy Premium Backlinks betterstack.tech – Tech Stack Directory & Comparison Platform, High Authority Links, Guest Posting Services to Skyrocket Google Rankings and Domain Authority in Programming and Dev Tools Market | NF                | Risky  |
+| vefogix.com           | https://vefogix.com/premium-backlinks-betterstack-tech-developer-tools...           | directory   | Buy Premium Backlinks betterstack.tech – Tech Stack Directory & Comparison Platform, High Authority Links, Guest Posting Services to Skyrocket Google Rankings and Domain Authority in Programming and Dev Tools Market | NF                | Risky  |
+| web20ranker.com       | https://web20ranker.com/guest-post-betterstack-tech-authority-links...              | blog        | Premium Guest Posting Service betterstack.tech – High Authority Backlinks for Developer Tools, Tech Stack Directory, Unbiased Reviews, Boost SEO Rankings with Professional Link Building and Contextual Links | NF                | Risky  |
+| web20ranker.com       | https://web20ranker.com/guest-post-betterstack-tech-authority-links...              | blog        | Premium Guest Posting Service betterstack.tech – High Authority Backlinks for Developer Tools, Tech Stack Directory, Unbiased Reviews, Boost SEO Rankings with Professional Link Building and Contextual Links | NF                | Risky  |
+| badassbacklinks.com   | https://badassbacklinks.com/premium-seo-links-betterstack-tech...                   | blog        | Buy High Authority Backlinks betterstack.tech – Tech Stack Directory & Unbiased Reviews, Premium SEO Services, Guest Posts to Increase Domain Rating, Organic Traffic and Google Visibility in Web Development Niche | NF                | Risky  |
+| badassbacklinks.com   | https://badassbacklinks.com/premium-seo-links-betterstack-tech...                   | blog        | Buy High Authority Backlinks betterstack.tech – Tech Stack Directory & Unbiased Reviews, Premium SEO Services, Guest Posts to Increase Domain Rating, Organic Traffic and Google Visibility in Web Development Niche | NF                | Risky  |
+| legiit.com            | https://legiit.com/premium-backlinks-betterstack-tech-stack-comparison...           | blog        | High Quality SEO Backlinks betterstack.tech – Boost Domain Authority in Tech Niche, Premium Guest Posts, Authority Links for Tech Stack Directory, Comparison Tools and Developer Resources | NF                | Risky  |
+| legiit.com            | https://legiit.com/premium-backlinks-betterstack-tech-stack-comparison...           | blog        | High Quality SEO Backlinks betterstack.tech – Boost Domain Authority in Tech Niche, Premium Guest Posts, Authority Links for Tech Stack Directory, Comparison Tools and Developer Resources | NF                | Risky  |
+| seobacklinkpro.shop   | https://seobacklinkpro.shop/premium-guest-post-betterstack-tech...                  | blog        | Premium SEO Backlinks betterstack.tech – Professional Link Building for Web Development Tools, Tech Stack Directory, High DA Guest Posts to Drive Massive Organic Traffic and Skyrocket Rankings | NF                | Risky  |
+| seobacklinkpro.shop   | https://seobacklinkpro.shop/premium-guest-post-betterstack-tech...                  | blog        | Premium SEO Backlinks betterstack.tech – Professional Link Building for Web Development Tools, Tech Stack Directory, High DA Guest Posts to Drive Massive Organic Traffic and Skyrocket Rankings | NF                | Risky  |

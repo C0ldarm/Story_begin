@@ -1,21 +1,18 @@
-name: DevOpsLabs CI + SonarCloud
+name: Lab-2 CI + SonarCloud
 
 on:
   pull_request:
     branches: [ main, master ]
     paths:
-      - 'Labs/DevOpsLabs/**'
+      - 'Labs/DevOpsLabs/Lab-2/**'
   push:
     branches: [ main, master ]
     paths:
-      - 'Labs/DevOpsLabs/**'
+      - 'Labs/DevOpsLabs/Lab-2/**'
 
 jobs:
   build:
     runs-on: ubuntu-latest
-    strategy:
-      matrix:
-        lab: [Lab-2]   # додавай сюди нові лаби (Lab-3 тощо)
 
     defaults:
       run:
@@ -34,10 +31,10 @@ jobs:
           distribution: 'temurin'
           cache: 'maven'
 
-      - name: Build and Test (${{ matrix.lab }})
+      - name: Build and Test with Testcontainers
         run: ./mvnw clean test --batch-mode --no-transfer-progress
 
-      - name: SonarCloud Analysis (${{ matrix.lab }})
+      - name: SonarCloud Analysis
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           SONAR_TOKEN: ${{ secrets.SONAR_TOKEN }}

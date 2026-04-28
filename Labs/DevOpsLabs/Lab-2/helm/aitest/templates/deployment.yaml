@@ -1,9 +1,9 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: aitest-app
+  name: {{ .Release.Name }}-app
 spec:
-  replicas: 4
+  replicas: {{ .Values.replicaCount }}
   selector:
     matchLabels:
       app: aitest
@@ -14,20 +14,20 @@ spec:
     spec:
       containers:
       - name: aitest
-        image: aitest:latest
-        imagePullPolicy: Never
+        image: "{{ .Values.image.repository }}:{{ .Values.image.tag }}"
+        imagePullPolicy: {{ .Values.image.pullPolicy }}
         ports:
         - containerPort: 8080
         env:
         - name: SPRING_DATA_MONGODB_HOST
-          value: "mongo"
+          value: mongodb
         - name: SPRING_DATA_MONGODB_PORT
           value: "27017"
         - name: SPRING_DATA_MONGODB_DATABASE
-          value: "security25db"
+          value: "{{ .Values.mongodb.auth.database }}"
         - name: SPRING_DATA_MONGODB_USERNAME
-          value: "admin"
+          value: "root"                                      # ← root замість admin
         - name: SPRING_DATA_MONGODB_PASSWORD
-          value: "adminpass"
+          value: "{{ .Values.mongodb.auth.rootPassword }}"   # ← rootPassword
         - name: SPRING_DATA_MONGODB_AUTHENTICATION_DATABASE
           value: "admin"

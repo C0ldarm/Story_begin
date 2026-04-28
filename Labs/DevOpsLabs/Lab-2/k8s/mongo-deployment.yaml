@@ -19,8 +19,8 @@ spec:
         - containerPort: 27017
         env:
         - name: MONGO_INITDB_ROOT_USERNAME
-          value: admin
+          value: "admin"
         - name: MONGO_INITDB_ROOT_PASSWORD
-          value: adminpass
+          value: "adminpass"
         - name: MONGO_INITDB_DATABASE
-          value: security25db
+          value: "security25db"

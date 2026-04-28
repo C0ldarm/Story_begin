@@ -15,11 +15,11 @@ jobs:
     runs-on: ubuntu-latest
     strategy:
       matrix:
-        lab: [Lab-1, Lab-2]   # додавай сюди нові лаби (Lab-3 тощо)
+        lab: [Lab-2]   # додавай сюди нові лаби (Lab-3 тощо)
 
     defaults:
       run:
-        working-directory: Labs/DevOpsLabs/${{ matrix.lab }}
+        working-directory: Labs/DevOpsLabs/Lab-2
 
     steps:
       - name: Checkout code

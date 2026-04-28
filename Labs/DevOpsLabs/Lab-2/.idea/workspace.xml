@@ -6,11 +6,10 @@
   <component name="ChangeListManager">
     <list default="true" id="55603dbf-1049-4745-9df0-36480698bc2d" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Dockerfile" beforeDir="false" afterPath="$PROJECT_DIR$/Dockerfile" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/k8s/app-deployment.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/k8s/app-deployment.yaml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/k8s/app-service.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/k8s/app-service.yaml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/k8s/mongo-deployment.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/k8s/mongo-deployment.yaml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/vn/aitest/item/UserDataInitializer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/vn/aitest/item/UserDataInitializer.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/docker-compose.yml" beforeDir="false" afterPath="$PROJECT_DIR$/docker-compose.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/password.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/application.properties" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -20,6 +19,10 @@
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/../../.." />
   </component>
+  <component name="KubernetesApiPersistence"><![CDATA[{}]]></component>
+  <component name="KubernetesApiProvider"><![CDATA[{
+  "isMigrated": true
+}]]></component>
   <component name="MavenImportPreferences">
     <option name="generalSettings">
       <MavenGeneralSettings>
@@ -86,7 +89,7 @@
       <updated>1777335765240</updated>
       <workItem from="1777335766860" duration="3408000" />
       <workItem from="1777345198734" duration="8953000" />
-      <workItem from="1777357086671" duration="2936000" />
+      <workItem from="1777357086671" duration="8766000" />
     </task>
     <servers />
   </component>

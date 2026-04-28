@@ -1,0 +1,20 @@
+replicaCount: 2
+
+image:
+  repository: aitest
+  tag: latest
+  pullPolicy: Never
+
+service:
+  type: NodePort
+  port: 80
+  targetPort: 8080
+  nodePort: 30080
+
+mongodb:
+  enabled: true
+  auth:
+    rootPassword: adminpass
+    username: admin
+    password: adminpass
+    database: security25db

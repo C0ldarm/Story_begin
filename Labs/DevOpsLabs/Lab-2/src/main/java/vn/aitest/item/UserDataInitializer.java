@@ -18,7 +18,7 @@ public class UserDataInitializer implements CommandLineRunner {
 
         userService.saveUser(new User("user", "user123", List.of(User.Role.USER)));
         userService.saveUser(new User("publisher", "pub123", List.of(User.Role.PUBLISHER)));
-        userService.saveUser(new User("admin", "admin123", List.of(User.Role.ADMIN)));
+        userService.saveUser(new User("adminadmin", "admin123", List.of(User.Role.ADMIN)));
 
         System.out.println("Seeded: user/user123 (USER), publisher/pub123 (PUBLISHER), admin/admin123 (ADMIN)");
     }

@@ -7,7 +7,12 @@ import org.springframework.boot.test.autoconfigure.web.servlet.AutoConfigureMock
 import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.http.MediaType;
 import org.springframework.security.test.context.support.WithUserDetails;
+import org.springframework.test.context.DynamicPropertyRegistry;
+import org.springframework.test.context.DynamicPropertySource;
 import org.springframework.test.web.servlet.MockMvc;
+import org.testcontainers.containers.MongoDBContainer;
+import org.testcontainers.junit.jupiter.Container;
+import org.testcontainers.junit.jupiter.Testcontainers;
 import vn.aitest.item.AiModel;
 import vn.aitest.item.AiModelRepository;
 
@@ -16,7 +21,11 @@ import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.
 
 @SpringBootTest(webEnvironment = SpringBootTest.WebEnvironment.RANDOM_PORT)
 @AutoConfigureMockMvc
+@Testcontainers
 class AccessTests {
+
+    @Container
+    static final MongoDBContainer mongoDBContainer = new MongoDBContainer("mongo:7.0");
 
     @Autowired
     private MockMvc mockMvc;
@@ -29,6 +38,11 @@ class AccessTests {
             """;
 
     private String testId;
+
+    @DynamicPropertySource
+    static void setMongoProperties(DynamicPropertyRegistry registry) {
+        registry.add("spring.data.mongodb.uri", mongoDBContainer::getReplicaSetUrl);
+    }
 
     @BeforeEach
     void setUp() {

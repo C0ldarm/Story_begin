@@ -31,8 +31,8 @@ jobs:
           distribution: 'temurin'
           cache: 'maven'
 
-      - name: Build and Test with Testcontainers
-        run: ./mvnw clean test --batch-mode --no-transfer-progress
+      - name: Build and Test
+        run: ./mvnw clean verify --batch-mode --no-transfer-progress
 
       - name: SonarCloud Analysis
         env:

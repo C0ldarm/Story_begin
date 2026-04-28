@@ -18,6 +18,7 @@ import vn.aitest.item.UserService;
 public class SecurityConfig {
 
     private static final String AI_MODELS_ALL = "/ai-models/**";
+    private static final String ROLE_ADMIN = "ADMIN";
 
     @Bean
     public SecurityFilterChain filterChain(HttpSecurity http) throws Exception {
@@ -29,13 +30,13 @@ public class SecurityConfig {
                         .requestMatchers(org.springframework.http.HttpMethod.GET, "/ai-models")
                         .hasAnyRole("USER", "PUBLISHER", "ADMIN")
                         .requestMatchers(org.springframework.http.HttpMethod.GET, AI_MODELS_ALL)
-                        .hasRole("ADMIN")
+                        .hasRole(ROLE_ADMIN)
                         .requestMatchers(org.springframework.http.HttpMethod.POST, "/ai-models")
                         .hasAnyRole("PUBLISHER", "ADMIN")
                         .requestMatchers(org.springframework.http.HttpMethod.PUT, AI_MODELS_ALL)
-                        .hasRole("ADMIN")
+                        .hasRole(ROLE_ADMIN)
                         .requestMatchers(org.springframework.http.HttpMethod.DELETE, AI_MODELS_ALL)
-                        .hasRole("ADMIN")
+                        .hasRole(ROLE_ADMIN)
                         .anyRequest().authenticated()
                 )
                 .httpBasic(httpBasic -> {});

@@ -4,19 +4,22 @@ on:
   pull_request:
     branches: [ main, master ]
     paths:
-      - 'Labs/DevOpsLabs/**'        # реагує тільки на зміни в DevOpsLabs
+      - 'Labs/DevOpsLabs/**'
   push:
     branches: [ main, master ]
     paths:
       - 'Labs/DevOpsLabs/**'
 
 jobs:
-  build-and-test:
+  build:
     runs-on: ubuntu-latest
+    strategy:
+      matrix:
+        lab: [Lab-1, Lab-2]   # додавай сюди нові лаби (Lab-3 тощо)
 
     defaults:
       run:
-        working-directory: Labs/DevOpsLabs   # всі команди виконуються тут
+        working-directory: Labs/DevOpsLabs/${{ matrix.lab }}
 
     steps:
       - name: Checkout code
@@ -31,15 +34,15 @@ jobs:
           distribution: 'temurin'
           cache: 'maven'
 
-      - name: Build and Test (Lab-1)
-        run: Lab-1/./mvnw clean verify --batch-mode --no-transfer-progress
+      - name: Build and Test (${{ matrix.lab }})
+        run: ./mvnw clean test --batch-mode --no-transfer-progress
 
-      - name: SonarCloud Analysis
+      - name: SonarCloud Analysis (${{ matrix.lab }})
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           SONAR_TOKEN: ${{ secrets.SONAR_TOKEN }}
         run: |
-          Lab-1/./mvnw sonar:sonar \
+          ./mvnw sonar:sonar \
             -Dsonar.projectKey=c0ldarm_dev0ps \
             -Dsonar.organization=c0ldarm \
             -Dsonar.host.url=https://sonarcloud.io \

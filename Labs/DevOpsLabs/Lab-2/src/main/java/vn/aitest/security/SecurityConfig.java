@@ -28,11 +28,11 @@ public class SecurityConfig {
                 .authorizeHttpRequests(auth -> auth
                         .requestMatchers("/login", "/actuator/**").permitAll()
                         .requestMatchers(org.springframework.http.HttpMethod.GET, "/ai-models")
-                        .hasAnyRole("USER", "PUBLISHER", "ADMIN")
+                        .hasAnyRole("USER", "PUBLISHER", ROLE_ADMIN)
                         .requestMatchers(org.springframework.http.HttpMethod.GET, AI_MODELS_ALL)
                         .hasRole(ROLE_ADMIN)
                         .requestMatchers(org.springframework.http.HttpMethod.POST, "/ai-models")
-                        .hasAnyRole("PUBLISHER", "ADMIN")
+                        .hasAnyRole("PUBLISHER", ROLE_ADMIN)
                         .requestMatchers(org.springframework.http.HttpMethod.PUT, AI_MODELS_ALL)
                         .hasRole(ROLE_ADMIN)
                         .requestMatchers(org.springframework.http.HttpMethod.DELETE, AI_MODELS_ALL)

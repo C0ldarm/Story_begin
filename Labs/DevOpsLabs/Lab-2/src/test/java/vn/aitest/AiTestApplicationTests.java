@@ -24,7 +24,7 @@ import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.
 @Testcontainers
 class AccessTests {
 
-    // ====================== CONSTANTS ======================
+    // ============х========== CONSTANTS ======================
     private static final String BASE_URL = "/ai-models";
 
     private static final String JSON = """

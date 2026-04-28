@@ -5,28 +5,9 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="55603dbf-1049-4745-9df0-36480698bc2d" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/.gitignore" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/encodings.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/jarRepositories.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/mvnw" beforeDir="false" afterPath="$PROJECT_DIR$/mvnw" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/aitest-0.0.1-SNAPSHOT.jar" beforeDir="false" afterPath="$PROJECT_DIR$/target/aitest-0.0.1-SNAPSHOT.jar" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/aitest-0.0.1-SNAPSHOT.jar.original" beforeDir="false" afterPath="$PROJECT_DIR$/target/aitest-0.0.1-SNAPSHOT.jar.original" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/vn/aitest/Aitest.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/vn/aitest/Aitest.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/vn/aitest/item/AiModel.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/vn/aitest/item/AiModel.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/vn/aitest/item/AiModelController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/vn/aitest/item/AiModelController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/vn/aitest/item/AiModelService.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/vn/aitest/item/AiModelService.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/vn/aitest/item/DataInitializer.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/vn/aitest/item/DataInitializer.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/vn/aitest/item/User$Role.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/vn/aitest/item/User$Role.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/vn/aitest/item/User.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/vn/aitest/item/User.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/vn/aitest/item/UserDataInitializer.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/vn/aitest/item/UserDataInitializer.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/vn/aitest/item/UserRepository.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/vn/aitest/item/UserRepository.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/vn/aitest/item/UserService.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/vn/aitest/item/UserService.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/vn/aitest/security/SecurityConfig.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/vn/aitest/security/SecurityConfig.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/test-classes/vn/aitest/AccessTests.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/vn/aitest/AccessTests.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/vn/aitest/AiTestApplicationTests.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/vn/aitest/AiTestApplicationTests.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -101,6 +82,7 @@
       <option name="presentableId" value="Default" />
       <updated>1777335765240</updated>
       <workItem from="1777335766860" duration="3408000" />
+      <workItem from="1777345198734" duration="1546000" />
     </task>
     <servers />
   </component>

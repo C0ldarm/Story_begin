@@ -62,7 +62,7 @@ jobs:
       - name: Compile (for Sonar)
         run: ./mvnw compile --batch-mode --no-transfer-progress
 
-      - name: SonarCloud Analysis
+            - name: SonarCloud Analysis
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           SONAR_TOKEN: ${{ secrets.SONAR_TOKEN }}
@@ -72,6 +72,6 @@ jobs:
             -Dsonar.organization=c0ldarm \
             -Dsonar.host.url=https://sonarcloud.io \
             -Dsonar.login=${{ secrets.SONAR_TOKEN }} \
+            -Dsonar.qualitygate.wait=false \
+            -Dsonar.coverage.exclusions=**/* \
             --batch-mode --no-transfer-progress
-            -Dsonar.qualitygate.wait=false 
-            -Dsonar.coverage.exclusions=**/* \ 

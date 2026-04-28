@@ -37,45 +37,51 @@ class AccessTests {
         testId = repo.save(model).getId();
     }
 
-    // === GET ALL ===
+    // ====================== GET ALL ======================
     @Test
     @WithUserDetails("user")
     void userCanGetAll() throws Exception {
-        mockMvc.perform(get("/ai-models")).andExpect(status().isOk());
+        mockMvc.perform(get("/ai-models"))
+                .andExpect(status().isOk());
     }
 
     @Test
     @WithUserDetails("publisher")
     void pubCanGetAll() throws Exception {
-        mockMvc.perform(get("/ai-models")).andExpect(status().isOk());
+        mockMvc.perform(get("/ai-models"))
+                .andExpect(status().isOk());
     }
 
     @Test
     @WithUserDetails("admin")
     void adminCanGetAll() throws Exception {
-        mockMvc.perform(get("/ai-models")).andExpect(status().isOk());
+        mockMvc.perform(get("/ai-models"))
+                .andExpect(status().isOk());
     }
 
-    // === GET ONE ===
+    // ====================== GET ONE ======================
     @Test
     @WithUserDetails("user")
     void userCannotGetOne() throws Exception {
-        mockMvc.perform(get("/ai-models/" + testId)).andExpect(status().isForbidden());
+        mockMvc.perform(get("/ai-models/" + testId))
+                .andExpect(status().isForbidden());
     }
 
     @Test
     @WithUserDetails("publisher")
     void pubCannotGetOne() throws Exception {
-        mockMvc.perform(get("/ai-models/" + testId)).andExpect(status().isForbidden());
+        mockMvc.perform(get("/ai-models/" + testId))
+                .andExpect(status().isForbidden());
     }
 
     @Test
     @WithUserDetails("admin")
     void adminCanGetOne() throws Exception {
-        mockMvc.perform(get("/ai-models/" + testId)).andExpect(status().isOk());
+        mockMvc.perform(get("/ai-models/" + testId))
+                .andExpect(status().isOk());
     }
 
-    // === POST ===
+    // ====================== POST ======================
     @Test
     @WithUserDetails("user")
     void userCannotPost() throws Exception {
@@ -103,7 +109,7 @@ class AccessTests {
                 .andExpect(status().isOk());
     }
 
-    // === PUT / DELETE (аналогічно) ===
+    // ====================== PUT ======================
     @Test
     @WithUserDetails("user")
     void userCannotPut() throws Exception {
@@ -131,6 +137,7 @@ class AccessTests {
                 .andExpect(status().isOk());
     }
 
+    // ====================== DELETE ======================
     @Test
     @WithUserDetails("user")
     void userCannotDelete() throws Exception {

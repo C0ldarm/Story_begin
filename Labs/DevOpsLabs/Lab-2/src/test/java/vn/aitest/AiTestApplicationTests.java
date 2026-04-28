@@ -24,6 +24,11 @@ import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.
 @Testcontainers
 class AccessTests {
 
+    private static final String BASE_URL = "/ai-models";
+    private static final String JSON = """
+            { "aiName": "TestAI", "strengths": "test" }
+            """;
+
     @Container
     static final MongoDBContainer mongoDBContainer = new MongoDBContainer("mongo:7.0");
 
@@ -32,10 +37,6 @@ class AccessTests {
 
     @Autowired
     private AiModelRepository repo;
-
-    private static final String JSON = """
-            { "aiName": "TestAI", "strengths": "test" }
-            """;
 
     private String testId;
 
@@ -55,21 +56,21 @@ class AccessTests {
     @Test
     @WithUserDetails("user")
     void userCanGetAll() throws Exception {
-        mockMvc.perform(get("/ai-models"))
+        mockMvc.perform(get(BASE_URL))
                 .andExpect(status().isOk());
     }
 
     @Test
     @WithUserDetails("publisher")
     void pubCanGetAll() throws Exception {
-        mockMvc.perform(get("/ai-models"))
+        mockMvc.perform(get(BASE_URL))
                 .andExpect(status().isOk());
     }
 
     @Test
     @WithUserDetails("admin")
     void adminCanGetAll() throws Exception {
-        mockMvc.perform(get("/ai-models"))
+        mockMvc.perform(get(BASE_URL))
                 .andExpect(status().isOk());
     }
 
@@ -77,21 +78,21 @@ class AccessTests {
     @Test
     @WithUserDetails("user")
     void userCannotGetOne() throws Exception {
-        mockMvc.perform(get("/ai-models/" + testId))
+        mockMvc.perform(get(BASE_URL + "/" + testId))
                 .andExpect(status().isForbidden());
     }
 
     @Test
     @WithUserDetails("publisher")
     void pubCannotGetOne() throws Exception {
-        mockMvc.perform(get("/ai-models/" + testId))
+        mockMvc.perform(get(BASE_URL + "/" + testId))
                 .andExpect(status().isForbidden());
     }
 
     @Test
     @WithUserDetails("admin")
     void adminCanGetOne() throws Exception {
-        mockMvc.perform(get("/ai-models/" + testId))
+        mockMvc.perform(get(BASE_URL + "/" + testId))
                 .andExpect(status().isOk());
     }
 
@@ -99,7 +100,7 @@ class AccessTests {
     @Test
     @WithUserDetails("user")
     void userCannotPost() throws Exception {
-        mockMvc.perform(post("/ai-models")
+        mockMvc.perform(post(BASE_URL)
                         .contentType(MediaType.APPLICATION_JSON)
                         .content(JSON))
                 .andExpect(status().isForbidden());
@@ -108,7 +109,7 @@ class AccessTests {
     @Test
     @WithUserDetails("publisher")
     void pubCanPost() throws Exception {
-        mockMvc.perform(post("/ai-models")
+        mockMvc.perform(post(BASE_URL)
                         .contentType(MediaType.APPLICATION_JSON)
                         .content(JSON))
                 .andExpect(status().isOk());
@@ -117,7 +118,7 @@ class AccessTests {
     @Test
     @WithUserDetails("admin")
     void adminCanPost() throws Exception {
-        mockMvc.perform(post("/ai-models")
+        mockMvc.perform(post(BASE_URL)
                         .contentType(MediaType.APPLICATION_JSON)
                         .content(JSON))
                 .andExpect(status().isOk());
@@ -127,7 +128,7 @@ class AccessTests {
     @Test
     @WithUserDetails("user")
     void userCannotPut() throws Exception {
-        mockMvc.perform(put("/ai-models/" + testId)
+        mockMvc.perform(put(BASE_URL + "/" + testId)
                         .contentType(MediaType.APPLICATION_JSON)
                         .content(JSON))
                 .andExpect(status().isForbidden());
@@ -136,7 +137,7 @@ class AccessTests {
     @Test
     @WithUserDetails("publisher")
     void pubCannotPut() throws Exception {
-        mockMvc.perform(put("/ai-models/" + testId)
+        mockMvc.perform(put(BASE_URL + "/" + testId)
                         .contentType(MediaType.APPLICATION_JSON)
                         .content(JSON))
                 .andExpect(status().isForbidden());
@@ -145,7 +146,7 @@ class AccessTests {
     @Test
     @WithUserDetails("admin")
     void adminCanPut() throws Exception {
-        mockMvc.perform(put("/ai-models/" + testId)
+        mockMvc.perform(put(BASE_URL + "/" + testId)
                         .contentType(MediaType.APPLICATION_JSON)
                         .content(JSON))
                 .andExpect(status().isOk());
@@ -155,21 +156,21 @@ class AccessTests {
     @Test
     @WithUserDetails("user")
     void userCannotDelete() throws Exception {
-        mockMvc.perform(delete("/ai-models/" + testId))
+        mockMvc.perform(delete(BASE_URL + "/" + testId))
                 .andExpect(status().isForbidden());
     }
 
     @Test
     @WithUserDetails("publisher")
     void pubCannotDelete() throws Exception {
-        mockMvc.perform(delete("/ai-models/" + testId))
+        mockMvc.perform(delete(BASE_URL + "/" + testId))
                 .andExpect(status().isForbidden());
     }
 
     @Test
     @WithUserDetails("admin")
     void adminCanDelete() throws Exception {
-        mockMvc.perform(delete("/ai-models/" + testId))
+        mockMvc.perform(delete(BASE_URL + "/" + testId))
                 .andExpect(status().isOk());
     }
 }

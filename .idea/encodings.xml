@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="Encoding">
+    <file url="file://$PROJECT_DIR$/Labs/DevOpsLabs/Lab-1/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/Labs/Test2/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/Labs/Test2/src/main/resources" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/Labs/Testing/IntToRom/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/Labs/Testing/IntToRom/src/main/resources" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/Labs/Testing/IntegrationTest/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/Labs/Testing/MockingTest/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/Labs/Testing/RomToInt/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/Labs/Testing/RomToInt/src/main/resources" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/Labs/Testing/Service-Test/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/Labs/Testing/Web security/Lab1/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/Labs/Testing/Web security/Lab2/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/Labs/Testing/Web security/Lab3/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/Labs/Testing/Web security/Lab4/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/Labs/Testing/Web security/Lab5/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/Labs/Testing/Web security/Lab6/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/Labs/Testing/Web security/Lab7/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/Labs/Testing/Web security/Lab9/src/main/java" charset="UTF-8" />
+  </component>
+</project>

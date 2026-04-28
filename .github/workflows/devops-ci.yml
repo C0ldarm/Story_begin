@@ -19,7 +19,7 @@ jobs:
 
     defaults:
       run:
-        working-directory: Labs/DevOpsLabs/${{ matrix.lab }}
+        working-directory: Labs/DevOpsLabs/Lab-1
 
     steps:
       - name: Checkout code
